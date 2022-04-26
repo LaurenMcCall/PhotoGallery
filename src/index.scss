@@ -1,15 +1,7 @@
-:root {
-  font: 16px / 1 sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-  // SDG brand colors
-  --asphalt: #2f3737;
-  --bright-sky: #80ced2;
-  --lime: #b1d133;
-  --night-sky: #85577e;
-  --sand: #f7f0da;
-  --sea: #5a9090;
-  --sun: #d5562b;
-  --tangerine: #f99d1b;
+:root {
+  font: 16px / 1 'Roboto', sans-serif;
 }
 
 html {
@@ -19,4 +11,59 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+h1 {
+  color: rgb(165, 93, 42);
+}
+h3 {
+  margin-top: -10px;
+}
+h2 {
+  color: rgb(165, 93, 42);
+}
+h4 {
+  margin-top: -10px;
+  margin-bottom: 4px;
+}
+
+ul {
+  list-style: none;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: -30px;
+}
+
+.text-color-rust {
+  color: rgb(165, 93, 42);
+  font-weight: 1000;
+}
+.ml-mt {
+  margin-left: 10px;
+  margin-top: 4px;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  margin-top: -10px;
+}
+
+nav ul {
+  margin-top: -14px;
+}
+.sticky-header {
+  position: sticky;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
 }
