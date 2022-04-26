@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router'
 import { Home } from './pages/Home'
 import { Link } from 'react-router-dom'
-import { Pandas } from './pages/Pandas'
+import { PhotoList } from './pages/PhotoList'
 import { PhotoDetail } from './pages/PhotoDetail'
 
 export function App() {
@@ -17,7 +17,7 @@ export function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="pandas" element={<Pandas />}></Route>
+          <Route path="/:categories" element={<PhotoList />}></Route>
           <Route
             path="/:categories/:photoIndex"
             element={<PhotoDetail />}
