@@ -1,8 +1,13 @@
 import React from 'react'
+import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import data from './data.json'
 
-export function Pandas() {
+export function PhotoDetail() {
+  const params =
+    useParams<{ categories: 'pandas' | 'miniatures'; photoIndex: string }>()
+  console.log(params)
+
   return (
     <div>
       <nav>
@@ -14,10 +19,18 @@ export function Pandas() {
             <li className="text-color-rust ml-mt">Home</li>
           </Link>
           <li className="text-color-rust ml-mt gray">/</li>
-          <li className="text-color-rust ml-mt a-disabled">Panda Bears</li>
+          <Link to="/pandas">
+            <li className="text-color-rust ml-mt">
+              {data[params.categories!].title}
+            </li>
+          </Link>
+          <li className="text-color-rust ml-mt gray">/</li>
+          <li className="text-color-rust ml-mt a-disabled">
+            {data[params.categories!].photos[Number(params.photoIndex)].title}
+          </li>
         </ul>
       </nav>
-      <section>
+      {/* <section>
         <h2 className="a-disabled">{data.pandas.title}</h2>
         <h4>{data.pandas.description}</h4>
         <div>
@@ -37,7 +50,7 @@ export function Pandas() {
             )
           })}
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
