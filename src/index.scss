@@ -66,4 +66,16 @@ nav ul {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: rgb(165, 93, 42);
+}
+a:visited {
+  text-decoration: none;
+  color: rgb(165, 93, 42);
+}
+.a-disabled {
+  pointer-events: none;
+  color: black;
+}
+.gray {
+  color: rgb(168, 168, 168);
 }
