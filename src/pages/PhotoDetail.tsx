@@ -19,7 +19,7 @@ export function PhotoDetail() {
             <li className="text-color-rust ml-mt">Home</li>
           </Link>
           <li className="text-color-rust ml-mt gray">/</li>
-          <Link to="/pandas">
+          <Link to={`./${params.categories!}`}>
             <li className="text-color-rust ml-mt">
               {data[params.categories!].title}
             </li>
@@ -30,27 +30,34 @@ export function PhotoDetail() {
           </li>
         </ul>
       </nav>
-      {/* <section>
-        <h2 className="a-disabled">{data.pandas.title}</h2>
-        <h4>{data.pandas.description}</h4>
+      <section>
+        <h2 className="a-disabled">
+          {data[params.categories!].photos[Number(params.photoIndex)].title}
+        </h2>
         <div>
-          {data.pandas.photos.map((photo, index) => {
-            return (
-              <Link to={`./${index}`} key={index}>
-                <img
-                  src={photo.imageURL}
-                  width="100%"
-                  alt={photo.title}
-                  key={index}
-                />
-                <div>{photo.title}</div>
-                <br />
-                <br />
-              </Link>
-            )
-          })}
+          <img
+            src={
+              data[params.categories!].photos[Number(params.photoIndex)]
+                .imageURL
+            }
+            width="100%"
+            alt={
+              data[params.categories!].photos[Number(params.photoIndex)].title
+            }
+          />
+          <a
+            className="text-color-rust"
+            href={
+              data[params.categories!].photos[Number(params.photoIndex)]
+                .sourceURL
+            }
+          >
+            Source
+          </a>
+          <br />
+          <br />
         </div>
-      </section> */}
+      </section>
     </div>
   )
 }
