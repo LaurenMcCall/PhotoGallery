@@ -16,12 +16,10 @@ export function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/:categories" element={<PhotoList />}></Route>
-          <Route
-            path="/:categories/:photoIndex"
-            element={<PhotoDetail />}
-          ></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/:categories" element={<PhotoList />} />
+          <Route path="/:categories/:photoIndex" element={<PhotoDetail />} />
+          <Route path="*" element={'No Match'} />
         </Routes>
       </main>
     </div>

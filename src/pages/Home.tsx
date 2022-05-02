@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 import data from './data.json'
 
@@ -43,6 +43,7 @@ export function Home() {
           </Link>
         </div>
       </section>
+      <Outlet />
     </div>
   )
 }

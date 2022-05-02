@@ -6,7 +6,6 @@ import data from './data.json'
 export function PhotoDetail() {
   const params =
     useParams<{ categories: 'pandas' | 'miniatures'; photoIndex: string }>()
-  console.log(params)
 
   return (
     <div>
@@ -19,7 +18,7 @@ export function PhotoDetail() {
             <li className="text-color-rust ml-mt">Home</li>
           </Link>
           <li className="text-color-rust ml-mt gray">/</li>
-          <Link to={`./${params.categories!}`}>
+          <Link to={`/${params.categories!}`}>
             <li className="text-color-rust ml-mt">
               {data[params.categories!].title}
             </li>

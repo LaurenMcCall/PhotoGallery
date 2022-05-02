@@ -72,6 +72,10 @@ a:visited {
   text-decoration: none;
   color: rgb(165, 93, 42);
 }
+a:hover {
+  font-weight: bold;
+}
+
 .a-disabled {
   pointer-events: none;
   color: black;
